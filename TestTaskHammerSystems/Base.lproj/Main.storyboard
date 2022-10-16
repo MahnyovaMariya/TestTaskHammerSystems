@@ -1,24 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Ads View Controller-->
+        <scene sceneID="Hst-CG-KMu">
+            <objects>
+                <viewController id="SXX-we-AbL" customClass="AdsViewController" customModule="TestTaskHammerSystems" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aqt-CI-ACo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oRQ-g2-MAB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOK-aS-rud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="-741"/>
+        </scene>
+        <!-- -->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestTaskHammerSystems" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uec-Dj-uwx">
+                                <rect key="frame" x="20" y="57" width="70" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="5vB-Uj-Ybk"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <menu key="menu" id="Mz5-U2-6A4">
+                                    <children>
+                                        <command title="Item 1" id="Sew-fn-2uN"/>
+                                        <command title="Item 2" id="tFk-Em-Fzf"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Москва">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5u-wH-lhu">
+                                <rect key="frame" x="0.0" y="101" width="390" height="743"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BB-40-Pvc">
+                                        <rect key="frame" x="0.0" y="300" width="390" height="443"/>
+                                        <connections>
+                                            <segue destination="P6U-tc-jit" kind="embed" identifier="EmbedSubcategory" id="nCY-2H-qMN"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwO-Ry-PPM">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="fEz-jd-smq"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="SXX-we-AbL" kind="embed" id="rUL-zh-6bi"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xwO-Ry-PPM" firstAttribute="top" secondItem="q5u-wH-lhu" secondAttribute="top" id="0JH-4Y-fsc"/>
+                                    <constraint firstAttribute="trailing" secondItem="4BB-40-Pvc" secondAttribute="trailing" id="8aU-U2-FVj"/>
+                                    <constraint firstAttribute="trailing" secondItem="xwO-Ry-PPM" secondAttribute="trailing" id="K6r-wq-cwe"/>
+                                    <constraint firstAttribute="bottom" secondItem="4BB-40-Pvc" secondAttribute="bottom" id="bnO-uH-G0n"/>
+                                    <constraint firstItem="4BB-40-Pvc" firstAttribute="top" secondItem="q5u-wH-lhu" secondAttribute="top" constant="300" id="fUJ-e3-CKv"/>
+                                    <constraint firstItem="xwO-Ry-PPM" firstAttribute="leading" secondItem="q5u-wH-lhu" secondAttribute="leading" id="g6O-fv-0hI"/>
+                                    <constraint firstItem="4BB-40-Pvc" firstAttribute="leading" secondItem="q5u-wH-lhu" secondAttribute="leading" id="hmR-2h-16F"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q5u-wH-lhu" firstAttribute="top" secondItem="uec-Dj-uwx" secondAttribute="bottom" constant="10" id="HVo-iy-CdM"/>
+                            <constraint firstItem="uec-Dj-uwx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="T65-gT-mMp"/>
+                            <constraint firstItem="uec-Dj-uwx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XLj-P5-p8R"/>
+                            <constraint firstAttribute="bottom" secondItem="q5u-wH-lhu" secondAttribute="bottom" id="YFd-uA-r6F"/>
+                            <constraint firstItem="q5u-wH-lhu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d0d-sN-kZG"/>
+                            <constraint firstItem="q5u-wH-lhu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hDq-Mt-JPZ"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" tag="1" title=" " id="N21-oE-Ukq"/>
+                    <connections>
+                        <outlet property="containerList" destination="4BB-40-Pvc" id="3os-hD-KPI"/>
+                        <outlet property="containerSubview" destination="xwO-Ry-PPM" id="c7x-QI-dvo"/>
+                        <outlet property="containerView" destination="q5u-wH-lhu" id="cbk-t5-aJo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="961.53846153846155" y="-2.1327014218009479"/>
+        </scene>
+        <!--Subcategories View Controller-->
+        <scene sceneID="H2E-zU-EOg">
+            <objects>
+                <viewController id="P6U-tc-jit" customClass="SubcategoriesViewController" customModule="TestTaskHammerSystems" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="58n-45-tbR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="443"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xcP-e0-ylC"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YrZ-LS-ZPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771" y="243"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
